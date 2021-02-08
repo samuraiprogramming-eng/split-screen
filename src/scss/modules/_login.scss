@@ -1,0 +1,127 @@
+// ============== Style Split Screen ============= //
+
+.split__screen {
+  display: flex;
+  flex-direction: column;
+}
+.right {
+  height: 100%;
+  background-color: var(--mainYellow);
+}
+.right,
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.copy {
+  text-align: center;
+}
+@include breakpoint(isMobile) {
+  .split__screen--img {
+    margin-top: 0.6rem;
+  }
+}
+.split__name {
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 200;
+  margin-top: 1.2rem;
+  color: var(--primaryColor);
+  opacity: 1;
+}
+.split__job {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 100;
+  color: var(--mainBlack);
+  opacity: 1;
+}
+.split__desc {
+  text-align: center;
+  width: 405px;
+  font-size: 1rem;
+  font-weight: 100;
+  color: var(--mainBlack);
+  margin: 2rem 0 1.7rem;
+  opacity: 1;
+}
+@include breakpoint(isMobile) {
+  .split__icons {
+    margin-bottom: 0.6rem;
+  }
+}
+.left {
+  height: 100%;
+  background-color: var(--primaryColor);
+  @include breakpoint(isCommon) {
+    height: 321px;
+  }
+}
+.left,
+.copy {
+  text-align: center;
+}
+.login {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 3.1rem;
+  color: var(--mainWhite);
+}
+.left form {
+  min-width: 450px;
+  @include breakpoint(isMobile) {
+    min-width: 380px;
+  }
+}
+input[type="text"],
+input[type="password"] {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--mainBlue);
+  border-radius: 4px;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  padding: 1em;
+  height: 40px;
+  outline: none;
+  color: var(--mainWhite);
+  background-color: var(--primaryColor);
+}
+::placeholder {
+  color: var(--mainWhite);
+}
+.login__btn {
+  display: block;
+  min-width: 100%;
+  height: 45px;
+  font-size: 1.1rem;
+  text-align: center;
+  border: 1px solid var(--mainYellow);
+  border-radius: 23px;
+  outline: none;
+  margin-top: 2rem;
+  color: var(--mainYellow);
+  background-color: var(--primaryColor);
+  transition: var(--mainTransition);
+  opacity: 1;
+  &:hover {
+    background-color: var(--mainYellow);
+    color: var(--primaryColor);
+  }
+}
+
+// media
+@media screen and (min-width: 920px) {
+  .split__screen {
+    flex-direction: row;
+    height: 100vh;
+  }
+  .right,
+  .left {
+    display: flex;
+    width: 50%;
+    height: auto;
+  }
+}

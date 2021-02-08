@@ -1,0 +1,18 @@
+// ============= style Footer =============== //
+.main__footer {
+  background: var(--mainWhite);
+  box-shadow: var(--lightShadow);
+  border: 1px solid var(--darkGrey);
+}
+.main__footer--text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__footer--desc {
+  text-align: center;
+  width: 255px;
+  font-size: 1rem;
+  color: var(--mainBlack);
+  margin: 1.2rem 0;
+}
